@@ -3,7 +3,7 @@ authorName = document.querySelector(".author .name"),
 qouteBtn = document.querySelector("button"),
 soundBtn = document.querySelector(".sound"),
 copyBtn = document.querySelector(".copy"),
-facebookBtn = document.querySelector(".facebook");
+twitterBtn = document.querySelector(".twitter");
 
 function randomQoute(){
     qouteBtn.classList.add("loading");
@@ -35,9 +35,14 @@ copyBtn.addEventListener("click", () => {
     document.body.removeChild(textArea);
 });
 
-// facebookBtn.addEventListener("click", () => {
-//     const shareUrl =`https://www.facebook.com/sharer/sharer.php?u=${qouteBtn.innerText}`;
-//     window.open(shareUrl, '_blank');
-// });
+
+
+twitterBtn.addEventListener("click", () => {
+    const quoteText = qouteText.innerText;
+    const author = authorName.innerText;
+    const tweetUrl = `https://twitter.com/intent/tweet?text="${quoteText}" - ${author}`;
+    window.open(tweetUrl, "_blank");
+});
+
 
 qouteBtn.addEventListener("click", randomQoute);
