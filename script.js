@@ -36,7 +36,6 @@ copyBtn.addEventListener("click", () => {
 });
 
 
-
 twitterBtn.addEventListener("click", () => {
     const quoteText = qouteText.innerText;
     const author = authorName.innerText;
